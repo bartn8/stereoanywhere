@@ -175,7 +175,7 @@ def resize_3d_short(dmap: np.ndarray, factor: float, dmap_type: str = "depth"):
     elif dmap_type == "disparity":
         _fast_warp_disparity(hdmap, pts)
     else:
-        raise Exception(f"Unkown type {dmap_type}. Need depth or disparity")
+        raise Exception(f"Unknown type {dmap_type}. Need depth or disparity")
 
     scale_factor = 1 if dmap_type == "depth" else factor
 
